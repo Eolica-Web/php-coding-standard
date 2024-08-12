@@ -45,6 +45,7 @@ use PhpCsFixer\Fixer\Strict\DeclareStrictTypesFixer;
 use PhpCsFixer\Fixer\Strict\StrictComparisonFixer;
 use PhpCsFixer\Fixer\StringNotation\SingleQuoteFixer;
 use PhpCsFixer\Fixer\Whitespace\ArrayIndentationFixer;
+use PhpCsFixer\Fixer\Whitespace\MethodChainingIndentationFixer;
 use PhpCsFixer\Fixer\Whitespace\TypeDeclarationSpacesFixer;
 use PhpCsFixer\Fixer\Whitespace\TypesSpacesFixer;
 use Symplify\CodingStandard\Fixer\LineLength\LineLengthFixer;
@@ -70,6 +71,9 @@ return ECSConfig::configure()
         SingleLineEmptyBodyFixer::class,
         CastSpacesFixer::class,
         TypeDeclarationSpacesFixer::class,
+
+        // Indentation
+        MethodChainingIndentationFixer::class,
 
         // // Casing
         ClassReferenceNameCasingFixer::class,
