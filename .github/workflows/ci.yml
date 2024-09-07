@@ -30,4 +30,4 @@ jobs:
         run: composer install
 
       - name: Lint
-        run: ./vendor/bin/ecs check
+        run: composer lint

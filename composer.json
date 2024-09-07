@@ -22,5 +22,9 @@
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.62",
         "symplify/coding-standard": "^12.2"
+    },
+    "scripts": {
+        "lint": "vendor/bin/ecs check -c ./ecs.php",
+        "lint-fix": "vendor/bin/ecs check --fix -c ./ecs.php"
     }
 }
