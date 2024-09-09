@@ -368,7 +368,6 @@ return ECSConfig::configure()
         PhpdocScalarFixer::class,
         PhpdocSeparationFixer::class,
         PhpdocSingleLineVarSpacingFixer::class,
-        PhpdocToCommentFixer::class,
         PhpdocTrimConsecutiveBlankLineSeparationFixer::class,
         PhpdocTrimFixer::class,
         PhpdocTypesFixer::class,
@@ -448,6 +447,7 @@ return ECSConfig::configure()
     // PHPDoc
     ->withConfiguredRule(PhpdocAlignFixer::class, ['align' => 'left'])
     ->withConfiguredRule(PhpdocOrderFixer::class, ['order' => ['param', 'return', 'throws']])
+    ->withConfiguredRule(PhpdocToCommentFixer::class, ['ignored_tags' => ['var']])
     ->withConfiguredRule(PhpdocTypesOrderFixer::class, ['null_adjustment' => 'always_last'])
     // Semicolon
     ->withConfiguredRule(MultilineWhitespaceBeforeSemicolonsFixer::class, ['strategy' => 'new_line_for_chained_calls'])
